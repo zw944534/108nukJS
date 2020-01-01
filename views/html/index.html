@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <title>Booking</title>
+</head>
+<body>
+  <script>
+    /////////// should fix to dymantic value
+    $(function() {
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 0,    //price min
+        max: 500,  //price max
+        values: [ 75, 300 ],
+        slide: function( event, ui ) {
+          $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+      });
+      $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    });
+  </script>
+
+	<div class="container">
+  	
+  	<!-- Content here -->
+	
+	<div class="row mb-4 ">
+    <div class="mx-auto" style="width: 1200px;">
+        <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Logo</a>
+         <div class=" mx-auto pl-5" >
+            <form class="form-inline ">
+    			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    			<button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
+  			</form>
+        </div>
+		    </nav>
+    </div>
+	  
+      
+    <br>
+    
+    <div class="row">
+      <div class="col-2">
+          <p>
+            <label for="amount">價格範圍 : </label>
+            <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+          </p>
+
+          <div id="slider-range"></div>
+          <br>
+        
+          <div class="row">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">5</label>
+            </div>
+          </div>
+          
+
+      </div>
+	    <div class="row col-10">
+	    	<div class="col-md-4 mb-3">
+	    		<div class="card" style="width: 18rem;">
+				  <img src="..." class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="http://www.yahoo.com.tw" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    	</div>
+	    	<div class="col-md-4">
+	    		<div class="card" style="width: 18rem;">
+				  <img src="..." class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    	</div>
+	    	<div class="col-md-4">
+	    		<div class="card" style="width: 18rem;">
+				  <img src="..." class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    	</div>
+	    	<div class="col-md-4">
+	    		<div class="card" style="width: 18rem;">
+				  <img src="..." class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    	</div>
+	    	<div class="col-md-4">
+	    		<div class="card" style="width: 18rem;">
+				  <img src="..." class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    	</div>
+	    </div>
+  	</div>
+    <div class=row>
+      <div class="col-4">
+      </div>
+      
+      <div class="col-8">
+        <div class=" mx-auto mt-3 pl-5" style="width: 1200px;" >
+       <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      </div>
+      
+    </div>
+
+
+	</div>
+
+</body>
+</html>

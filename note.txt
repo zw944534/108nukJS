@@ -1,3 +1,9 @@
 1. 後台新增刪除房型
 2. 前台分頁顯示房型
 3. 基本的篩選(價格區間....)
+
+	//////////// DB design ////////////////////
+
+	member	=>	id(亂數產生) , name , account , password	=>先保留
+	
+	room	=>	 category, describe, rating, time, location, name , price , photo(url), note {	service:	breakfast, cart, dinner, gym, laundry, park, pool, wifi}

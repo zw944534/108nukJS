@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Detail</title>
+  
+
+  <style type="text/css">
+    .pic{
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+      overflow: hidden;
+          
+        }
+        .pic  img{
+          width:100%;
+            height:100%;
+        }
+    img{
+           max-width: 700px;
+        }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="mx-auto" style="width: 1200px;">
+        <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Logo</a>
+         <div class=" mx-auto pl-5" >
+            <form class="form-inline ">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
+        </form>
+        </div>
+        </nav>
+    </div>
+      <div class="row ">
+          <div class="row ">
+          </div>
+        <div class="col-xl">
+          <% for (let i=0;i<rData.length;i++){ %>
+          
+          <div class="row mb-4 mr-4 mt-2">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="<%- rData[i].photo%>" class="d-block w-100" alt="...">
+                  </div>
+                  
+                </div>
+              </div>
+          </div>
+          <div class="row ">
+              
+          </div>
+        </div>
+        <div class="col-xl">
+          <br>
+          <div class="row ">
+              <%- rData[i].category %><br>
+              <%- rData[i].name %>
+          </div>
+          <div class="row ">
+              <span class="badge badge-primary">房型推廣標籤</span>
+          </div>
+          <br>
+          <div class="row ">
+              使用優惠卷
+          </div>
+          <div class="row ">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="優惠卷" aria-label="優惠卷" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">確定</button>
+                  </div>
+                </div> 
+          </div>
+
+          <div class="row ">
+    
+        
+          <br>
+          <div class="row ml-4">
+              <div class="row ">
+                <form>
+                  住房日期: <input type="date" name="">
+                  <br>
+                  退房日期: <input type="date" name="">
+                </form>
+                  
+              </div>
+              <div class="row mt-2">
+                  <h4>房型介紹</h4>
+                  <p>
+                    <%- rData[i].describe %>
+                  </p>
+                <br>
+                  <h5>設施</h5>
+                    <div class="row mt-5">
+                      <% for (let j=0;j<sData.length;j++){ %>
+                      <% if(sData[j].breakfast==true){ %>
+                        <i class="material-icons">free_breakfast</i>提供早餐
+                      <% } %>
+                      <% if(sData[j].cart==true){ %>
+                        <i class="material-icons">directions_car</i>接駁服務
+                      <% } %>
+                      <% if(sData[j].dinner==true){ %>
+                        <i class="material-icons">restaurant</i>提供晚餐
+                      <% } %>
+                      <% if(sData[j].gym==true){ %>
+                        <i class="material-icons">fitness_center</i>提供健身房
+                      <% } %>
+                      <% if(sData[j].laundry==true){ %>
+                        <i class="material-icons">local_library</i>洗衣服務
+                      <% } %>
+                      <% if(sData[j].park==true){ %>
+                        <i class="material-icons">local_parking</i>停車服務
+                      <% } %>
+                      <% if(sData[j].pool==true){ %>
+                        <i class="material-icons">pool</i>提供泳池
+                      <% } %>
+                      <% if(sData[j].wifi==true){ %>
+                        <i class="material-icons">rss_feed</i>提供wifi
+                      <% } %>
+
+                      <% } %>
+                    </div>
+                   
+              </div>
+          </div>
+         <% } %>
+      </div>
+  </div>
+
+
+
+</body>
+</html>

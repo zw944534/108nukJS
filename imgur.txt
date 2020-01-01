@@ -1,0 +1,5 @@
+	clientID	be2f5b50dbecf8e
+
+	client secret	927308d09a6db9f757a63fed405b7b38bf4e660c
+
+	access token	43b528247ea4a00f1f5795c2920fed3ccc7b00fb
